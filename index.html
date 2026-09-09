@@ -208,7 +208,7 @@
       <li>
         <p class="tag">Punkt 2 &middot; föreläsning + övning, 30 min</p>
         <h3>Human in the Loop</h3>
-        <p>När ska AI få agera själv, och när måste en människa fatta beslutet? Deltagarna placerar arbetsuppgifter i tre risknivåer.</p>
+        <p>När ska AI få agera själv, och när måste en människa fatta beslutet? Deltagarna placerar arbetsuppgifter i tre risknivåer, 20 minuter. De sista 10 minuterna jämför ni svaren i helgrupp: var landade ni olika, och varför? Oenigheten är själva poängen, inte ett tecken på att övningen gick fel.</p>
         <ul class="legend">
           <li class="green"><b>AI kan göra själv</b><p>Låg risk, lätt att rätta till</p></li>
           <li class="yellow"><b>AI föreslår, människa godkänner</b><p>Medelrisk, behöver ett omdöme</p></li>
@@ -237,36 +237,40 @@
       <li>
         <p class="tag">Punkt 4 &middot; workshop, 45 min</p>
         <h3>Designa din agent</h3>
-        <p>Bygg första versionen på papper: syfte, målgrupp, input, output, begränsningar och var en människa måste in i loopen. Presentera för en annan grupp och få feedback.</p>
+        <p>Bygg första versionen på papper: syfte, målgrupp, input, output, begränsningar och var en människa måste in i loopen. Jobba i par eller en trio, gärna samma personer båda halvdagarna, det gör återkopplingen på halvdag 2 mycket enklare. Presentera för en annan grupp och få feedback.</p>
+        <blockquote class="callout" style="margin-top:16px">
+          <p>Exempel: en agent som hjälper en regionchef prioritera veckan. Input: veckorapporter, försäljningsdata, HR-policy. Output: en prioriterad åtgärdslista. Begränsning: fattar aldrig personalbeslut själv.</p>
+          <cite>Så konkret bör designen bli</cite>
+        </blockquote>
       </li>
     </ol>
 
     <div class="homework">
       <p class="tag">Hemuppgift, till halvdag 2</p>
       <h3>Testa agentdesignen i praktiken</h3>
-      <p>Under de kommande två veckorna: testa idén, även om den bara finns på papper än så länge. Dokumentera vad som fungerade, vad som inte gjorde det, vilken information som saknades och vad agenten borde göra bättre. Ta med anteckningarna till nästa tillfälle.</p>
+      <p>Under de kommande två veckorna: testa idén, även om den bara finns på papper än så länge. Dokumentera vad som fungerade, vad som inte gjorde det, vilken information som saknades och vad agenten borde göra bättre. Hann du inte testa? Ta med dig varför inte, det är också användbart att dela. Ta med anteckningarna till nästa tillfälle.</p>
     </div>
   </section>
 
   <section>
     <h2>Halvdag 2 &middot; Bygg din första AI-agent</h2>
-    <p class="note">Två veckor senare, med samma grupp. Tiderna nedan summerar till ca 20 minuter över slotten, korta ner efter behov.</p>
+    <p class="note">Två veckor senare, med samma grupper som halvdag 1.</p>
 
     <ul class="rundown">
       <li><span class="time">09.00&ndash;09.20</span><span class="name">Återkoppling<em>0</em></span><span class="n">20 min</span></li>
       <li><span class="time">09.20&ndash;09.50</span><span class="name">Bygg i praktiken<em>1</em></span><span class="n">30 min</span></li>
-      <li><span class="time">09.50&ndash;10.50</span><span class="name">Bygg agent v1<em>2</em></span><span class="n">60 min</span></li>
-      <li class="pause"><span class="time">10.50&ndash;11.10</span><span class="name">Paus</span><span class="n">20 min</span></li>
-      <li><span class="time">11.10&ndash;11.55</span><span class="name">Testa och stressa<em>3</em></span><span class="n">45 min</span></li>
-      <li><span class="time">11.55&ndash;12.25</span><span class="name">Agent-review<em>4</em></span><span class="n">30 min</span></li>
-      <li><span class="time">12.25&ndash;12.50</span><span class="name">Nästa steg<em>5</em></span><span class="n">25 min</span></li>
+      <li><span class="time">09.50&ndash;10.40</span><span class="name">Bygg agent v1<em>2</em></span><span class="n">50 min</span></li>
+      <li class="pause"><span class="time">10.40&ndash;11.00</span><span class="name">Paus</span><span class="n">20 min</span></li>
+      <li><span class="time">11.00&ndash;11.45</span><span class="name">Testa och stressa<em>3</em></span><span class="n">45 min</span></li>
+      <li><span class="time">11.45&ndash;12.15</span><span class="name">Agent-review<em>4</em></span><span class="n">30 min</span></li>
+      <li><span class="time">12.15&ndash;12.30</span><span class="name">Nästa steg<em>5</em></span><span class="n">15 min</span></li>
     </ul>
 
     <ol class="impl">
       <li>
         <p class="tag">Punkt 0 &middot; 20 min</p>
         <h3>Återkoppling från hemuppgiften</h3>
-        <p>Deltagarna delar vad de byggde, vad de lärde sig och vad som överraskade dem.</p>
+        <p>Deltagarna delar vad de byggde, vad de lärde sig och vad som överraskade dem, i samma par eller trio som halvdag 1. Testade du inte hann? Dela vad som stod i vägen i stället, minst lika värdefullt för gruppen.</p>
       </li>
       <li>
         <p class="tag">Punkt 1 &middot; demonstration, 30 min</p>
@@ -274,7 +278,7 @@
         <p>Genomgång i ChatGPT: anpassade GPT:er, Projects, kunskapsfiler, instruktioner och verktyg. Vad fungerar bra, vad fungerar mindre bra. Bygger du själv i Claude eller Copilot är principerna desamma, se verktygsguiderna längre ner på sidan.</p>
       </li>
       <li>
-        <p class="tag">Punkt 2 &middot; workshop, 60 min</p>
+        <p class="tag">Punkt 2 &middot; workshop, 50 min</p>
         <h3>Bygg agent version 1</h3>
         <p>Deltagarna bygger sin egen agent, i det verktyg de själva väljer. Paulina coachar. Målet är en fungerande första version, inte en färdig lösning.</p>
       </li>
@@ -296,9 +300,9 @@
         <p>Deltagarna testar varandras lösningar och ger feedback: vad fungerar, vad är otydligt, vilket värde skapas, vilka risker finns.</p>
       </li>
       <li>
-        <p class="tag">Punkt 5 &middot; 25 min</p>
+        <p class="tag">Punkt 5 &middot; 15 min</p>
         <h3>Nästa steg</h3>
-        <p>Var hittar man fler användningsområden? Hur introducerar man det här i sitt team? Vilka arbetsflöden bör man börja med, och vilka bör man undvika?</p>
+        <p>Kort skriftlig reflektion, några minuter var: var hittar du fler användningsområden, hur introducerar du det här i ditt team, vilka arbetsflöden bör ni börja med och vilka bör ni undvika. Dela en av svaren i helgrupp innan ni avslutar.</p>
         <blockquote class="callout" style="margin-top:16px">
           <p>Om vi träffas igen om sex månader, vilken agent hoppas du använda varje vecka?</p>
           <cite>Avslutande fråga</cite>
