@@ -1,0 +1,33 @@
+DEMO-CASE FÖR HALVDAG 2, PUNKT 1
+Fiktiv data byggd på samma Nordic Style-universum som referensexemplet
+(Anna Stockholm, Erik Malmö, Thomas Uppsala, Linda Göteborg, Maria
+Västerås, plus en ny butik: Johan i Norrköping). Allt är påhittat men
+hänger ihop, så en agent som resonerar över flera filer hittar riktiga
+kopplingar (t.ex. att Frida i Uppsala börjar i ett redan pressat team).
+
+CASE 1 · Veckorapport → prioriterad åtgärdslista
+Fil: case1_vecka_04_johan_norrkoping.txt
+Kombinera med de befintliga vecka_04-rapporterna och forsaljningsdata.
+Förslag: Claude Cowork eller ChatGPT Work.
+
+CASE 2 · Bemanning och sjukfrånvaro
+Fil: case2_bemanningsschema_vecka_05.txt
+Förslag: Claude Cowork.
+
+CASE 3 · Kampanjuppföljning → färdigt underlag
+Fil: case3_kampanjresultat_hostrean.txt
+Förslag: ChatGPT Work.
+
+CASE 4 · Kundklagomål → mönster och svarsutkast
+Fil: case4_kundklagomal_inkorg.txt
+Förslag: Copilot Studio (enkel regel: eskalera återbetalning över X kr
+eller allt som rör skada/allergi/säkerhet till en människa).
+
+CASE 5 · Introduktion av nya medarbetare
+Filer: case5_onboardingchecklista.txt + case5_nyanstallda_att_introducera.txt
+Förslag: Copilot Studio eller ChatGPT Work.
+
+Tips: ärende 6 i klagomålslistan och kommentarerna i kampanjresultatet
+refererar tillbaka till incidenten i Norrköping. Bra tillfälle att visa
+hur en agent väger in kontext den redan sett tidigare i samma mapp,
+i stället för att svara isolerat på varje fil.

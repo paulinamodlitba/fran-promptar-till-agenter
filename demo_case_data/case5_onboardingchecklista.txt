@@ -1,0 +1,38 @@
+ONBOARDINGCHECKLISTA, BUTIKSPERSONAL
+Modekedjan Nordic Style
+
+Gäller alla nya medarbetare i butik, oavsett roll. Vissa punkter varierar
+beroende på roll och anställningsform, se anteckningar.
+
+1. Innan första dagen
+   - Anställningsavtal signerat
+   - Passerkort och kassasystem-inlogg beställt
+   - Personalhandbok skickad (se Brand_Guidelines.txt för varumärkesdelen)
+   - Schema för första två veckorna klart
+
+2. Första dagen
+   - Välkomstsamtal med butikschef, 30 min
+   - Genomgång av säkerhetsrutiner (larm, kassa, nödutgångar)
+   - Visa personalutrymmen, skåp, rutiner för raster
+   - Kort rundvandring i butiken med fokus på var olika kategorier finns
+
+3. Första veckan
+   - Genomgång av kassasystemet, praktisk övning
+   - Genomgång av returrutiner och kundserviceriktlinjer
+   - Skuggning av en erfaren kollega minst 2 pass
+   - Kort introduktion till varumärket och tonen mot kund
+
+4. Efter två veckor
+   - Uppföljningssamtal med butikschef: hur känns det, några frågor
+   - Bekräfta att medarbetaren kan hantera kassa och retur självständigt
+
+5. Roll-specifikt
+   - Biträdande butikschef: extra genomgång av schemaläggning och
+     personalansvar, tillgång till bemanningssystemet
+   - Säsongsanställd: förkortad introduktion, fokus på kassa och
+     kundservice, ingen tillgång till bemanningssystem
+   - Kassapersonal: extra fokus på kassarutiner och kontanthantering
+
+6. GDPR och känslig information
+   - Genomgång av vad som gäller kunddata och personuppgifter
+   - Får inte diskutera kollegors eller kunders personliga uppgifter

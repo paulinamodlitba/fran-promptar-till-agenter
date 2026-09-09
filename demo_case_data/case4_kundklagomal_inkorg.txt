@@ -1,0 +1,65 @@
+KUNDKLAGOMÅL, INKOMNA VIA KUNDTJÄNSTMEJL
+Modekedjan Nordic Style, vecka 42
+(fiktiva, avidentifierade exempel för demo)
+
+--- Ärende 1 ---
+Från: kund (Stockholm City)
+Ämne: Fel storlek levererad
+"Beställde jacka i storlek M, fick storlek S. Vill ha rätt storlek eller
+pengarna tillbaka. Kvitto bifogat."
+
+--- Ärende 2 ---
+Från: kund (Malmö Triangeln)
+Ämne: Missnöjd med bemötande
+"Personalen i butiken var korta och ointresserade när jag frågade om hjälp
+i lördags. Kändes stressat och som att jag störde."
+
+--- Ärende 3 ---
+Från: kund (Göteborg Nordstan)
+Ämne: Skadad vara, vill ha ersättning
+"Köpte en vinterjacka för 2 400 kr för tre veckor sedan. Dragkedjan gick
+sönder redan efter andra användningen. Vill ha ny jacka eller full
+återbetalning."
+
+--- Ärende 4 ---
+Från: kund (webbutik, levererat till Uppsala)
+Ämne: Beställning aldrig levererad
+"Beställde för 1 800 kr för två veckor sedan, spårningen visar 'levererad'
+men jag har inte fått något paket. Har inte fått svar på tidigare mejl."
+
+--- Ärende 5 ---
+Från: kund (Västerås Erikslund)
+Ämne: Bra bemötande, vill lyfta en anställd
+"Ville bara säga att säljaren som hjälpte mig i lördags var fantastisk,
+tog sig verkligen tid trots att det var mycket folk. Tror hon hette Lisa."
+
+--- Ärende 6 ---
+Från: kund (Norrköping Ringen)
+Ämne: Osäker efter händelse i butiken
+"Läste om vad som hände i er butik. Är oroliga för personalens säkerhet
+och undrar vad ni gör åt saken."
+
+--- Ärende 7 ---
+Från: kund (Stockholm City)
+Ämne: Prisfel i butik
+"Prislappen sa 399 kr men vid kassan tog ni 499 kr. Fick rätta till det på
+plats men tycker det ska fungeras bättre."
+
+--- Ärende 8 ---
+Från: kund (Malmö Triangeln)
+Ämne: Retur nekad
+"Ville lämna tillbaka en tröja inom 14 dagar men fick nej i kassan med
+hänvisning till att prislappen var borttagen. Jag klippte bort den av
+misstag, varan är i övrigt oanvänd."
+
+--- Ärende 9 ---
+Från: kund (Göteborg Nordstan)
+Ämne: Allergisk reaktion
+"Fick utslag efter att ha använt en halsduk köpt hos er. Vill veta vilket
+material den är gjord av och om andra har rapporterat samma sak."
+
+--- Ärende 10 ---
+Från: kund (webbutik)
+Ämne: Fråga om storlek innan köp
+"Undrar hur den här vinterjackan faller i storlek, är ni mellan storlekar
+brukar ni rekommendera upp eller ner?"
