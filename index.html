@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Från promptar till AI-agenter — workshopmaterial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F5F7;
+    --ink:#0F1317;
+    --grey:#6B7178;
+    --rule:#D3D7DC;
+    --mark:#00D689;
+    --mark-ink:#04321F;
+    --wash:#D3F3E6;
+    --measure:66ch;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:Archivo,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:17px;
+    line-height:1.55;
+    font-variant-numeric:tabular-nums;
+    -webkit-font-smoothing:antialiased;
+  }
+  .sheet{max-width:1040px;margin:0 auto;padding:56px 32px 96px}
+  @media (max-width:640px){.sheet{padding:36px 20px 64px}}
+
+  a{color:var(--mark-ink);text-decoration-color:var(--mark)}
+  :focus-visible{outline:2px solid var(--mark-ink);outline-offset:3px}
+
+  .masthead{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:baseline;justify-content:space-between;
+    padding-bottom:14px;border-bottom:1.5px solid var(--ink)}
+  .masthead .who{font-weight:600;color:var(--ink);font-size:14.5px}
+  .masthead .dates{text-align:right;color:var(--grey);font-size:13.5px;line-height:1.5}
+  .masthead .dates strong{color:var(--ink);font-weight:600}
+
+  h1{
+    font-size:clamp(2.1rem,5.6vw,3.7rem);
+    line-height:1.05;
+    letter-spacing:-0.03em;
+    font-weight:600;
+    margin:38px 0 0;
+    max-width:21ch;
+  }
+  .standfirst{max-width:var(--measure);margin:22px 0 0;font-size:19.5px;line-height:1.5;color:#252A2F}
+  .standfirst b{font-weight:600}
+
+  .keyline{margin:34px 0 0;display:flex;flex-wrap:wrap;gap:0}
+  .keyline div{flex:1 1 150px;padding:14px 20px 14px 0;border-top:1px solid var(--rule)}
+  .keyline strong{display:block;font-size:32px;font-weight:600;letter-spacing:-0.02em;line-height:1.1}
+  .keyline span{display:block;color:var(--grey);font-size:14px;line-height:1.35;margin-top:4px;max-width:24ch}
+
+  section{margin-top:64px}
+  .section-lead{margin-bottom:26px}
+  h2{
+    font-size:14.5px;font-weight:600;letter-spacing:0.02em;margin:0 0 4px;
+    padding-bottom:10px;border-bottom:1px solid var(--ink);text-transform:uppercase
+  }
+  .note{color:var(--grey);font-size:14px;margin:10px 0 26px;max-width:var(--measure)}
+  p.body{max-width:var(--measure)}
+
+  /* schedule list, plain time ranges, no bars */
+  .rundown{margin:0;padding:0;list-style:none}
+  .rundown li{display:grid;grid-template-columns:118px 1fr 58px;align-items:baseline;gap:14px;
+    padding:11px 0;border-top:1px solid var(--rule)}
+  .rundown li:last-child{border-bottom:1px solid var(--rule)}
+  .rundown .time{font-size:14.5px;color:var(--grey);font-weight:500}
+  .rundown .name{font-size:15.5px}
+  .rundown .name em{display:block;font-style:normal;font-size:12.5px;color:var(--grey);margin-top:1px}
+  .rundown li.pause .name{color:var(--grey)}
+  .rundown .n{text-align:right;font-size:14.5px;color:var(--grey)}
+
+  /* HITL swatch legend */
+  .legend{margin:18px 0 0;padding:0;list-style:none;display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:0}
+  .legend li{padding:12px 18px 14px 14px;border-top:1px solid var(--rule);position:relative}
+  .legend b{font-size:16px;font-weight:600;letter-spacing:-0.005em;display:block;margin-bottom:4px}
+  .legend p{margin:2px 0 0;font-size:14.5px;line-height:1.4;color:var(--grey)}
+  .legend li::before{content:"";position:absolute;top:-1px;left:0;width:34px;height:3px}
+  .legend li.green::before{background:var(--mark)}
+  .legend li.yellow::before{background:#E8B93B}
+  .legend li.red::before{background:#D6432B}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .chip{border:1px solid var(--rule);border-radius:3px;padding:5px 11px;font-size:13.5px;color:var(--ink)}
+
+  /* implications-style content list */
+  .impl{margin:0;padding:0;list-style:none;max-width:var(--measure)}
+  .impl li{padding:22px 0 24px;border-top:1px solid var(--rule)}
+  .impl li:last-child{border-bottom:1px solid var(--rule)}
+  .impl .tag{font-size:12.5px;color:var(--grey);text-transform:uppercase;letter-spacing:0.03em;margin-bottom:6px}
+  .impl h3{margin:0 0 8px;font-size:19px;font-weight:600;line-height:1.3}
+  .impl p{margin:0 0 10px;font-size:16px;color:#252A2F;max-width:var(--measure)}
+  .impl ul{margin:10px 0 0;padding-left:20px}
+  .impl li ul li{border:none;padding:3px 0}
+  .impl dl{margin:12px 0 0;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:15px}
+  .impl dt{font-weight:600;color:var(--ink)}
+  .impl dd{margin:0;color:#252A2F}
+
+  blockquote.callout{margin:24px 0 0;padding:20px 24px;border-left:3px solid var(--mark);background:rgba(0,214,137,0.06);
+    max-width:var(--measure)}
+  blockquote.callout p{margin:0;font-size:18px;line-height:1.42;letter-spacing:-0.006em;font-style:italic;color:var(--ink)}
+  blockquote.callout cite{display:block;margin-top:10px;font-style:normal;font-size:13px;color:var(--grey);text-transform:uppercase;letter-spacing:0.03em}
+
+  .homework{margin-top:28px;padding:24px;border:1.5px solid var(--ink);max-width:var(--measure)}
+  .homework .tag{font-size:12.5px;text-transform:uppercase;letter-spacing:0.03em;color:var(--grey);margin-bottom:6px}
+  .homework h3{margin:0 0 10px;font-size:19px;font-weight:600}
+  .homework p{margin:0;font-size:15.5px;color:#252A2F}
+
+  /* tool tabs, restyled as underlined toggles, not pills */
+  .toolbar{display:flex;gap:28px;border-bottom:1px solid var(--rule);margin-bottom:32px;flex-wrap:wrap}
+  .tool-btn{background:none;border:none;padding:10px 0;font-size:16px;font-weight:500;
+    color:var(--grey);cursor:pointer;font-family:Archivo,sans-serif;border-bottom:2px solid transparent;margin-bottom:-1px}
+  .tool-btn.active{color:var(--ink);border-bottom-color:var(--mark);font-weight:600}
+  .tool-content{display:none}
+  .tool-content.active{display:block}
+
+  .steps{max-width:var(--measure)}
+  .step{display:grid;grid-template-columns:30px 1fr;gap:14px;padding:16px 0;border-top:1px solid var(--rule)}
+  .step:last-of-type{border-bottom:1px solid var(--rule)}
+  .step-number{font-size:14px;font-weight:600;color:var(--grey);padding-top:1px}
+  .step-title{font-size:16.5px;font-weight:600;margin-bottom:4px}
+  .step-description{font-size:15.5px;line-height:1.55;color:#252A2F}
+  .step-description a{font-weight:500}
+
+  .code-block{background:var(--ink);color:#E8EAED;border-radius:3px;padding:18px 20px;margin-top:12px;
+    font-family:'SF Mono','Monaco','Courier New',monospace;font-size:13px;line-height:1.6;overflow-x:auto}
+
+  .note-box{background:transparent;border:1px solid var(--rule);border-left:3px solid var(--ink);padding:18px 22px;
+    margin:32px 0;font-size:15.5px;line-height:1.6;color:#252A2F;max-width:var(--measure)}
+  .note-box strong{font-weight:600;color:var(--ink)}
+
+  .materials{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0 40px}
+  .materials .col h3{font-size:16px;font-weight:600;margin:0 0 4px;padding-bottom:10px;border-bottom:1px solid var(--rule)}
+  .materials .col p.sub{color:var(--grey);font-size:13.5px;margin:0 0 14px}
+  .materials ul{list-style:none;margin:0;padding:0}
+  .materials li{font-size:15px;padding:8px 0;border-top:1px solid var(--rule);color:#252A2F}
+  .materials li:last-child{border-bottom:1px solid var(--rule)}
+
+  .download-bar{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
+    margin-top:32px;padding:22px 0;border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink)}
+  .download-bar p{margin:0;font-size:15px;color:var(--grey);max-width:44ch}
+  .btn-primary{display:inline-block;background:var(--ink);color:var(--paper);padding:12px 26px;
+    text-decoration:none;font-size:15px;font-weight:600;white-space:nowrap}
+  .btn-primary:hover{background:var(--mark-ink)}
+
+  footer{margin-top:72px;padding-top:16px;border-top:1.5px solid var(--ink);
+    color:var(--grey);font-size:13.5px;max-width:var(--measure)}
+  footer p{margin:0 0 6px}
+  footer strong{color:var(--ink)}
+
+  @media (max-width:600px){
+    .rundown li{grid-template-columns:88px 1fr 44px;gap:8px}
+    .masthead{flex-direction:column;align-items:flex-start}
+    .masthead .dates{text-align:left}
+  }
+</style>
+</head>
+<body>
+<main class="sheet">
+
+  <div class="masthead">
+    <p class="who">We Should Be Friends × Ledarna inom Handeln</p>
+    <p class="dates">Stockholm: <strong>16 sep + 7 okt 2026</strong><br>Malmö: <strong>1 okt + 14 okt 2026</strong></p>
+  </div>
+
+  <h1>Ni testar AI varje dag. Nu bygger ni agenten som faktiskt gör jobbet.</h1>
+
+  <p class="standfirst">Kursen går på två halvdagar med två veckors mellanrum, med Paulina Modlitba. Första gången kartlägger du ett eget arbetsflöde och skissar en första agent. Mellan tillfällena testar du idén i praktiken. Andra gången bygger du en fungerande version, sätter den på prov och tar med dig nästa steg.</p>
+
+  <div class="keyline">
+    <div><strong>2</strong><span>halvdagar med två veckors mellanrum, samma grupp båda gångerna</span></div>
+    <div><strong>09.00&ndash;12.30</strong><span>båda tillfällena, inklusive paus</span></div>
+    <div><strong>3</strong><span>verktyg att välja mellan: Claude, ChatGPT eller Copilot</span></div>
+    <div><strong>1</strong><span>agent, din egen, redo att testa på jobbet</span></div>
+  </div>
+
+  <section>
+    <h2>Halvdag 1 &middot; Från promptar till arbetsflöden</h2>
+    <p class="note">Tiderna är ungefärliga och kan justeras något på plats.</p>
+
+    <ul class="rundown">
+      <li><span class="time">09.00&ndash;09.15</span><span class="name">Incheckning<em>0</em></span><span class="n">15 min</span></li>
+      <li><span class="time">09.15&ndash;09.50</span><span class="name">Vad är en agent?<em>1</em></span><span class="n">35 min</span></li>
+      <li><span class="time">09.50&ndash;10.20</span><span class="name">Human in the Loop<em>2</em></span><span class="n">30 min</span></li>
+      <li class="pause"><span class="time">10.20&ndash;10.40</span><span class="name">Paus</span><span class="n">20 min</span></li>
+      <li><span class="time">10.40&ndash;11.30</span><span class="name">Kartlägg arbetsflöde<em>3</em></span><span class="n">50 min</span></li>
+      <li><span class="time">11.30&ndash;12.15</span><span class="name">Designa din agent<em>4</em></span><span class="n">45 min</span></li>
+    </ul>
+
+    <ol class="impl">
+      <li>
+        <p class="tag">Punkt 1 &middot; föreläsning, 35 min</p>
+        <h3>Vad är egentligen en AI-agent?</h3>
+        <p>Skillnaden mellan en prompt, en anpassad GPT, en agent och ett helt arbetsflöde. Varför agenter blivit nästa stora steg, och var hypen tar överhanden på verkligheten. Exempel från handel, HR, kundservice och ledarskap.</p>
+        <blockquote class="callout" style="margin-top:16px">
+          <p>Vilka delar av ditt arbete upprepas ofta?</p>
+          <cite>Diskussionsfråga</cite>
+        </blockquote>
+      </li>
+      <li>
+        <p class="tag">Punkt 2 &middot; föreläsning + övning, 30 min</p>
+        <h3>Human in the Loop</h3>
+        <p>När ska AI få agera själv, och när måste en människa fatta beslutet? Deltagarna placerar arbetsuppgifter i tre risknivåer.</p>
+        <ul class="legend">
+          <li class="green"><b>AI kan göra själv</b><p>Låg risk, lätt att rätta till</p></li>
+          <li class="yellow"><b>AI föreslår, människa godkänner</b><p>Medelrisk, behöver ett omdöme</p></li>
+          <li class="red"><b>Människa fattar beslut</b><p>Hög risk, AI stannar utanför</p></li>
+        </ul>
+        <div class="chips">
+          <span class="chip">Schemaläggning</span>
+          <span class="chip">Rekrytering</span>
+          <span class="chip">Kampanjidéer</span>
+          <span class="chip">Medarbetarsamtal</span>
+          <span class="chip">Kundklagomål</span>
+        </div>
+      </li>
+      <li>
+        <p class="tag">Punkt 3 &middot; workshop, 50 min</p>
+        <h3>Kartlägg ett eget arbetsflöde</h3>
+        <p>Välj en verklig arbetsuppgift, till exempel introduktion av nya medarbetare, medarbetarsamtal, kampanjplanering, veckomöten, kompetensutveckling eller kundfeedback, och kartlägg den:</p>
+        <dl>
+          <dt>Trigger</dt><dd>Vad sätter processen igång?</dd>
+          <dt>Information</dt><dd>Vad behövs för att göra jobbet?</dd>
+          <dt>Beslut</dt><dd>Vilka beslut fattas längs vägen?</dd>
+          <dt>Tidstjuv</dt><dd>Vad tar mest tid?</dd>
+          <dt>AI-hjälp</dt><dd>Var skulle AI kunna hjälpa till?</dd>
+        </dl>
+      </li>
+      <li>
+        <p class="tag">Punkt 4 &middot; workshop, 45 min</p>
+        <h3>Designa din agent</h3>
+        <p>Bygg första versionen på papper: syfte, målgrupp, input, output, begränsningar och var en människa måste in i loopen. Presentera för en annan grupp och få feedback.</p>
+      </li>
+    </ol>
+
+    <div class="homework">
+      <p class="tag">Hemuppgift, till halvdag 2</p>
+      <h3>Testa agentdesignen i praktiken</h3>
+      <p>Under de kommande två veckorna: testa idén, även om den bara finns på papper än så länge. Dokumentera vad som fungerade, vad som inte gjorde det, vilken information som saknades och vad agenten borde göra bättre. Ta med anteckningarna till nästa tillfälle.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Halvdag 2 &middot; Bygg din första AI-agent</h2>
+    <p class="note">Två veckor senare, med samma grupp. Tiderna nedan summerar till ca 20 minuter över slotten, korta ner efter behov.</p>
+
+    <ul class="rundown">
+      <li><span class="time">09.00&ndash;09.20</span><span class="name">Återkoppling<em>0</em></span><span class="n">20 min</span></li>
+      <li><span class="time">09.20&ndash;09.50</span><span class="name">Bygg i praktiken<em>1</em></span><span class="n">30 min</span></li>
+      <li><span class="time">09.50&ndash;10.50</span><span class="name">Bygg agent v1<em>2</em></span><span class="n">60 min</span></li>
+      <li class="pause"><span class="time">10.50&ndash;11.10</span><span class="name">Paus</span><span class="n">20 min</span></li>
+      <li><span class="time">11.10&ndash;11.55</span><span class="name">Testa och stressa<em>3</em></span><span class="n">45 min</span></li>
+      <li><span class="time">11.55&ndash;12.25</span><span class="name">Agent-review<em>4</em></span><span class="n">30 min</span></li>
+      <li><span class="time">12.25&ndash;12.50</span><span class="name">Nästa steg<em>5</em></span><span class="n">25 min</span></li>
+    </ul>
+
+    <ol class="impl">
+      <li>
+        <p class="tag">Punkt 0 &middot; 20 min</p>
+        <h3>Återkoppling från hemuppgiften</h3>
+        <p>Deltagarna delar vad de byggde, vad de lärde sig och vad som överraskade dem.</p>
+      </li>
+      <li>
+        <p class="tag">Punkt 1 &middot; demonstration, 30 min</p>
+        <h3>Så bygger man en agent i praktiken</h3>
+        <p>Genomgång i ChatGPT: anpassade GPT:er, Projects, kunskapsfiler, instruktioner och verktyg. Vad fungerar bra, vad fungerar mindre bra. Bygger du själv i Claude eller Copilot är principerna desamma, se verktygsguiderna längre ner på sidan.</p>
+      </li>
+      <li>
+        <p class="tag">Punkt 2 &middot; workshop, 60 min</p>
+        <h3>Bygg agent version 1</h3>
+        <p>Deltagarna bygger sin egen agent, i det verktyg de själva väljer. Paulina coachar. Målet är en fungerande första version, inte en färdig lösning.</p>
+      </li>
+      <li>
+        <p class="tag">Punkt 3 &middot; workshop, 45 min</p>
+        <h3>Testa, stressa och förbättra agenten</h3>
+        <p>Testa vad som händer med:</p>
+        <ul>
+          <li>Otydliga instruktioner</li>
+          <li>Felaktig input</li>
+          <li>Ofullständig information</li>
+          <li>Svåra edge cases från er egen vardag</li>
+        </ul>
+        <p style="margin-top:10px">Förbättra instruktionerna utifrån det ni ser.</p>
+      </li>
+      <li>
+        <p class="tag">Punkt 4 &middot; 30 min</p>
+        <h3>Agent-review</h3>
+        <p>Deltagarna testar varandras lösningar och ger feedback: vad fungerar, vad är otydligt, vilket värde skapas, vilka risker finns.</p>
+      </li>
+      <li>
+        <p class="tag">Punkt 5 &middot; 25 min</p>
+        <h3>Nästa steg</h3>
+        <p>Var hittar man fler användningsområden? Hur introducerar man det här i sitt team? Vilka arbetsflöden bör man börja med, och vilka bör man undvika?</p>
+        <blockquote class="callout" style="margin-top:16px">
+          <p>Om vi träffas igen om sex månader, vilken agent hoppas du använda varje vecka?</p>
+          <cite>Avslutande fråga</cite>
+        </blockquote>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Kom igång med ditt verktyg</h2>
+    <p class="note">Välj det du redan har tillgång till, eller det du är mest nyfiken på. Samma principer gäller i alla tre.</p>
+
+    <div class="toolbar">
+      <button class="tool-btn active" onclick="showTool('claude', event)">Claude</button>
+      <button class="tool-btn" onclick="showTool('chatgpt', event)">ChatGPT</button>
+      <button class="tool-btn" onclick="showTool('copilot', event)">Microsoft Copilot</button>
+    </div>
+
+    <div id="claude-tool" class="tool-content active">
+      <div class="steps">
+        <div class="step">
+          <span class="step-number">01</span>
+          <div>
+            <div class="step-title">Skapa konto</div>
+            <div class="step-description">Gå till <a href="https://claude.ai" target="_blank">claude.ai</a> och skapa ett gratis konto.</div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">02</span>
+          <div>
+            <div class="step-title">Skapa ett Project</div>
+            <div class="step-description">Klicka på "Projects" i vänstermenyn, sedan "Create Project". Namnge det efter din agent.</div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">03</span>
+          <div>
+            <div class="step-title">Ladda upp underlag</div>
+            <div class="step-description">Klicka "Add Content" och ladda upp dokumenten din agent ska känna till: exempel, mallar, riktlinjer från din egen vardag.</div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">04</span>
+          <div>
+            <div class="step-title">Sätt instruktioner</div>
+            <div class="step-description">Klicka på "Set custom instructions" och beskriv syfte, output och begränsningar utifrån din agentdesign.</div>
+            <div class="code-block">Du är en AI-agent som hjälper mig med [uppgiften från din kartläggning]. När jag frågar dig ska du: 1) läsa igenom tillgängligt underlag, 2) identifiera mönster och det som behöver min uppmärksamhet, 3) föreslå konkreta nästa steg, 4) vara koncis men insiktsfull.</div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">05</span>
+          <div>
+            <div class="step-title">Ställ din första fråga</div>
+            <div class="step-description">Testa med en enkel fråga, sedan en som kräver att den väger flera källor mot varandra.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="chatgpt-tool" class="tool-content">
+      <div class="steps">
+        <div class="step">
+          <span class="step-number">01</span>
+          <div>
+            <div class="step-title">Skapa konto</div>
+            <div class="step-description">Gå till <a href="https://chat.openai.com" target="_blank">chat.openai.com</a> och skapa ett gratis konto.</div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">02</span>
+          <div>
+            <div class="step-title">Skapa en anpassad GPT eller ett Project</div>
+            <div class="step-description">Gå till "Explore GPTs" &rarr; "Create", eller starta ett Project om du har ChatGPT Plus. Det är här kunskapsfiler och instruktioner samlas.</div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">03</span>
+          <div>
+            <div class="step-title">Ladda upp underlag</div>
+            <div class="step-description">Lägg till kunskapsfilerna din agent ska använda: exempel, mallar, riktlinjer från din egen vardag.</div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">04</span>
+          <div>
+            <div class="step-title">Ge instruktioner</div>
+            <div class="step-description">Skriv instruktionerna utifrån din agentdesign, eller inled chatten med dem:</div>
+            <div class="code-block">Jag har laddat upp underlag för [uppgiften från din kartläggning]. Du är min AI-agent. När jag ställer frågor ska du: 1) analysera relevanta dokument, 2) identifiera mönster och prioritera det som behöver min uppmärksamhet, 3) ge konkreta förslag, 4) vara koncis men insiktsfull. Bekräfta att du förstår uppdraget.</div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">05</span>
+          <div>
+            <div class="step-title">Ställ din första fråga</div>
+            <div class="step-description">När ChatGPT bekräftat, testa med ett verkligt exempel.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="copilot-tool" class="tool-content">
+      <div class="steps">
+        <div class="step">
+          <span class="step-number">01</span>
+          <div>
+            <div class="step-title">Kontrollera tillgång</div>
+            <div class="step-description">Copilot ingår i vissa Microsoft 365-licenser. Kolla med IT om ni har tillgång, via <a href="https://copilot.microsoft.com" target="_blank">copilot.microsoft.com</a> eller direkt i Word/Teams. Har du "Office Agent" tillgängligt, välj den.</div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">02</span>
+          <div>
+            <div class="step-title">Öppna en ny konversation</div>
+            <div class="step-description">Via Teams, Word eller webbversionen.</div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">03</span>
+          <div>
+            <div class="step-title">Ladda upp underlag</div>
+            <div class="step-description">Dra och släpp, eller klicka på gem-ikonen. Vissa versioner begränsar antalet filer per konversation.</div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">04</span>
+          <div>
+            <div class="step-title">Ge instruktioner</div>
+            <div class="step-description">Samma struktur som i ChatGPT-exemplet ovan fungerar väl. Skriv om den utifrån din agentdesign.</div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">05</span>
+          <div>
+            <div class="step-title">Ställ din första fråga</div>
+            <div class="step-description">När Copilot bekräftat uppdraget, testa med ett verkligt exempel.</div>
+          </div>
+        </div>
+      </div>
+      <div class="note-box">
+        <strong>Fördel med Copilot:</strong> är ni redan i Microsoft 365 stannar data inom samma ekosystem som Teams, Outlook, Word och Excel, vilket kan förenkla GDPR-hanteringen.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Material</h2>
+    <p class="note">Allt du behöver för att följa med i kursen och öva vidare mellan tillfällena.</p>
+
+    <div class="materials">
+      <div class="col">
+        <h3>Referensexempel</h3>
+        <p class="sub">Ett färdigt exempel att utforska, inte det du själv ska bygga</p>
+        <ul>
+          <li>5 fiktiva veckorapporter från butikschefer</li>
+          <li>Försäljningsdata och nyckeltal</li>
+          <li>HR-policy för butikschefer</li>
+          <li>Steg-för-steg-instruktion för Claude Projects</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>Arbetsbok</h3>
+        <p class="sub">Formulären du fyller i under båda halvdagarna</p>
+        <ul>
+          <li>Kartlägg ett eget arbetsflöde</li>
+          <li>Designa din agent, sex fält</li>
+          <li>Hemuppgiftslogg mellan tillfällena</li>
+          <li>Testfrågor och nästa steg för halvdag 2</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="download-bar">
+      <p>Ett paket med referensexempel och arbetsbok, redo att laddas ner.</p>
+      <a href="workshop_material.zip" class="btn-primary" download>Ladda ner material</a>
+    </div>
+  </section>
+
+  <div class="note-box">
+    <strong>Viktigt om GDPR:</strong> ladda aldrig upp känsliga personuppgifter (personnummer, löner, medicinska detaljer) i ett AI-verktyg. Referensexemplen är fiktiva och säkra att använda. Testar du med egna, verkliga underlag, anonymisera känslig data först.
+  </div>
+
+  <footer>
+    <p><strong>We Should Be Friends AB</strong></p>
+    <p>Workshop framtagen för Ledarna inom Handeln, hösten 2026. Kursledare Paulina Modlitba.</p>
+  </footer>
+
+</main>
+
+<script>
+  function showTool(tool, evt){
+    document.querySelectorAll('.tool-content').forEach(function(el){ el.classList.remove('active'); });
+    document.querySelectorAll('.tool-btn').forEach(function(el){ el.classList.remove('active'); });
+    document.getElementById(tool + '-tool').classList.add('active');
+    evt.currentTarget.classList.add('active');
+  }
+</script>
+</body>
+</html>
