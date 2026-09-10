@@ -5,32 +5,39 @@ Den här arbetsboken följer dig genom båda halvdagarna. Fyll i den för hand,
 i ett dokument eller direkt i det AI-verktyg du bygger i.
 
 
-DEL 1 · KARTLÄGG ETT EGET ARBETSFLÖDE
+DEL 1 · KARTLÄGG VAD DU VILL LÖSA
 (halvdag 1, punkt 4)
 
-Välj en verklig arbetsuppgift som återkommer i din vardag. Några exempel:
-introduktion av nya medarbetare, medarbetarsamtal, kampanjplanering,
-veckomöten, kompetensutveckling, kundfeedback. Välj gärna något du redan
-känner en gnutta irritation över att det tar för lång tid.
+Välj antingen en verklig arbetsuppgift som återkommer i din vardag,
+till exempel introduktion av nya medarbetare, medarbetarsamtal,
+kampanjplanering, veckomöten, kompetensutveckling, kundfeedback, eller
+ett problem du brottas med, till exempel bristande överblick över
+försäljning mellan butiker eller otydligt bemanningsläge. Många av de
+starkaste agenterna löser inte ett arbetsflöde, de löser att du saknar
+koll, ofta via en dashboard. Välj gärna något du redan känner en gnutta
+irritation över.
 
-Min arbetsuppgift: _______________________________________________
+Det jag vill lösa: _______________________________________________
 
-1. Vad sätter igång processen? (Vad är det som gör att den här uppgiften
-   börjar, ett datum, ett mejl, en signal från någon annan?)
+1. Vad sätter igång processen, eller när märker du av problemet? (Ett
+   datum, ett mejl, en signal från någon annan, eller ett återkommande
+   tillfälle där du önskar du hade bättre koll?)
    ___________________________________________________________________
 
-2. Vilken information behövs för att göra jobbet?
+2. Vilken information behövs för att göra jobbet, eller för att få
+   överblicken?
    ___________________________________________________________________
 
-3. Vilka beslut fattas längs vägen?
+3. Vilka beslut fattas, eller borde fattas, utifrån det?
    ___________________________________________________________________
 
 4. Vad tar mest tid, det som faktiskt kräver ditt omdöme eller det som
    bara är hantverk (leta fram, sammanställa, formatera)?
    ___________________________________________________________________
 
-5. Var skulle AI kunna hjälpa till, och var vill du absolut inte släppa
-   in den?
+5. Var skulle AI kunna hjälpa till, med ett utkast, en sammanställning
+   eller en dashboard att checka av, och var vill du absolut inte
+   släppa in den?
    ___________________________________________________________________
 
 
