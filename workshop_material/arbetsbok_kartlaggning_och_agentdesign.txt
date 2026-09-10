@@ -1,0 +1,161 @@
+ARBETSBOK
+Från promptar till AI-agenter — Ledarna inom Handeln
+
+Den här arbetsboken följer dig genom båda halvdagarna. Fyll i den för hand,
+i ett dokument eller direkt i det AI-verktyg du bygger i.
+
+
+DEL 1 · KARTLÄGG ETT EGET ARBETSFLÖDE
+(halvdag 1, punkt 3)
+
+Välj en verklig arbetsuppgift som återkommer i din vardag. Några exempel:
+introduktion av nya medarbetare, medarbetarsamtal, kampanjplanering,
+veckomöten, kompetensutveckling, kundfeedback. Välj gärna något du redan
+känner en gnutta irritation över att det tar för lång tid.
+
+Min arbetsuppgift: _______________________________________________
+
+1. Vad sätter igång processen? (Vad är det som gör att den här uppgiften
+   börjar, ett datum, ett mejl, en signal från någon annan?)
+   ___________________________________________________________________
+
+2. Vilken information behövs för att göra jobbet?
+   ___________________________________________________________________
+
+3. Vilka beslut fattas längs vägen?
+   ___________________________________________________________________
+
+4. Vad tar mest tid, det som faktiskt kräver ditt omdöme eller det som
+   bara är hantverk (leta fram, sammanställa, formatera)?
+   ___________________________________________________________________
+
+5. Var skulle AI kunna hjälpa till, och var vill du absolut inte släppa
+   in den?
+   ___________________________________________________________________
+
+
+DEL 2 · DESIGNA DIN AGENT
+(halvdag 1, punkt 4)
+
+Jobba i par eller en trio, gärna samma personer båda halvdagarna. Det gör
+återkopplingen på halvdag 2 mycket enklare.
+
+Exempel på hur konkret det bör bli: en agent som hjälper en regionchef
+prioritera veckan. Syfte: peka ut vad som behöver uppmärksamhet just nu.
+Input: veckorapporter, försäljningsdata, HR-policy. Output: en
+prioriterad åtgärdslista. Begränsning: fattar aldrig personalbeslut
+själv, föreslår bara.
+
+Syfte
+Vad ska agenten faktiskt lösa åt dig? En mening räcker.
+___________________________________________________________________
+
+Målgrupp
+Vem använder den, bara du eller fler i teamet?
+___________________________________________________________________
+
+Input
+Vad behöver agenten få se för att kunna hjälpa till (dokument, data,
+tidigare exempel, en mall)?
+___________________________________________________________________
+
+Output
+Vad ska komma ut på andra sidan? Ett förslag, ett utkast, en analys,
+en prioriterad lista?
+___________________________________________________________________
+
+Begränsningar
+Vad ska agenten aldrig göra på egen hand? Vilken information får den
+aldrig se (tänk GDPR: personnummer, löner, medicinska uppgifter)?
+___________________________________________________________________
+
+Human in the loop
+Var i processen måste en människa godkänna innan något går vidare?
+___________________________________________________________________
+
+Presentera designen för en annan grupp och samla feedbacken här:
+___________________________________________________________________
+
+
+DEL 3 · HEMUPPGIFT MELLAN TILLFÄLLENA
+(två veckor, fram till halvdag 2)
+
+Testa agentdesignen i praktiken, även om den bara finns på papper eller
+som en enkel prompt än så länge. Dokumentera efter varje test. Hann du
+inte testa? Skriv i stället ner vad som stod i vägen, det är också
+värdefullt att dela på halvdag 2.
+
+Vad fungerade?
+___________________________________________________________________
+
+Vad fungerade inte?
+___________________________________________________________________
+
+Vilken information saknades när du väl körde igång?
+___________________________________________________________________
+
+Vad borde agenten göra bättre nästa gång?
+___________________________________________________________________
+
+Ta med anteckningarna till halvdag 2. Vi börjar dagen med att dela vad
+ni byggt och vad som överraskade er.
+
+
+OBS · TVÅ SPÅR PÅ HALVDAG 2
+
+Har du redan tillgång till Claude Cowork, ChatGPT Work eller en agent
+i Microsoft Copilot Studio? Bygg din design direkt där, det är den
+riktiga agent-versionen. Om du inte har det, bygger du vidare i Claude
+Projects, ChatGPT eller Copilot-chatt, precis som halvdag 1. Samma
+design fungerar i båda spåren, skillnaden är hur många steg verktyget
+tar själv.
+
+
+DEL 4 · STRESSTESTA OCH FÖRBÄTTRA
+(halvdag 2, punkt 3)
+
+Kör din agent version 1 genom fyra typer av påfrestning och notera vad
+som händer:
+
+Otydliga instruktioner
+___________________________________________________________________
+
+Felaktig input
+___________________________________________________________________
+
+Ofullständig information
+___________________________________________________________________
+
+Ett svårt edge case från din egen vardag
+___________________________________________________________________
+
+Vad behöver du skriva om i instruktionerna efter det här testet?
+___________________________________________________________________
+
+
+DEL 5 · NÄSTA STEG
+(halvdag 2, punkt 5)
+
+Var hittar du fler användningsområden i din egen vardag?
+___________________________________________________________________
+
+Hur introducerar du det här för resten av ditt team?
+___________________________________________________________________
+
+Vilka arbetsflöden bör ni börja med?
+___________________________________________________________________
+
+Vilka bör ni undvika, i alla fall till att börja med?
+___________________________________________________________________
+
+Avslutande fråga att ta med sig:
+Om vi träffas igen om sex månader, vilken agent hoppas du använda
+varje vecka?
+___________________________________________________________________
+
+
+Viktigt om GDPR: ladda aldrig upp personnummer, löner eller medicinska
+uppgifter i ett AI-verktyg. Anonymisera alltid känslig data innan du
+testar med egna, verkliga underlag.
+
+We Should Be Friends AB · workshop för Ledarna inom Handeln, hösten 2026
