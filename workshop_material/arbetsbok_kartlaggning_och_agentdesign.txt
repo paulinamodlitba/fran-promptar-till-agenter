@@ -6,7 +6,7 @@ i ett dokument eller direkt i det AI-verktyg du bygger i.
 
 
 DEL 1 · KARTLÄGG ETT EGET ARBETSFLÖDE
-(halvdag 1, punkt 3)
+(halvdag 1, punkt 4)
 
 Välj en verklig arbetsuppgift som återkommer i din vardag. Några exempel:
 introduktion av nya medarbetare, medarbetarsamtal, kampanjplanering,
@@ -34,11 +34,12 @@ Min arbetsuppgift: _______________________________________________
    ___________________________________________________________________
 
 
-DEL 2 · DESIGNA DIN AGENT
-(halvdag 1, punkt 4)
+DEL 2A · BÖRJA SKISSA DIN AGENT
+(halvdag 1, punkt 5)
 
-Jobba i par eller en trio, gärna samma personer båda halvdagarna. Det gör
-återkopplingen på halvdag 2 mycket enklare.
+Fyra fält räcker idag, resten fyller du i tillsammans med gruppen på
+halvdag 2. Jobba i par eller en trio, gärna samma personer båda
+halvdagarna. Det gör återkopplingen på halvdag 2 mycket enklare.
 
 Exempel på hur konkret det bör bli: en agent som hjälper en regionchef
 prioritera veckan. Syfte: peka ut vad som behöver uppmärksamhet just nu.
@@ -48,10 +49,6 @@ själv, föreslår bara.
 
 Syfte
 Vad ska agenten faktiskt lösa åt dig? En mening räcker.
-___________________________________________________________________
-
-Målgrupp
-Vem använder den, bara du eller fler i teamet?
 ___________________________________________________________________
 
 Input
@@ -69,21 +66,14 @@ Vad ska agenten aldrig göra på egen hand? Vilken information får den
 aldrig se (tänk GDPR: personnummer, löner, medicinska uppgifter)?
 ___________________________________________________________________
 
-Human in the loop
-Var i processen måste en människa godkänna innan något går vidare?
-___________________________________________________________________
-
-Presentera designen för en annan grupp och samla feedbacken här:
-___________________________________________________________________
-
 
 DEL 3 · HEMUPPGIFT MELLAN TILLFÄLLENA
 (två veckor, fram till halvdag 2)
 
-Testa agentdesignen i praktiken, även om den bara finns på papper eller
-som en enkel prompt än så länge. Dokumentera efter varje test. Hann du
-inte testa? Skriv i stället ner vad som stod i vägen, det är också
-värdefullt att dela på halvdag 2.
+Fundera vidare på skissen, testa den gärna i praktiken om du hinner,
+även om den bara finns på papper eller som en enkel prompt än så länge.
+Dokumentera efter varje test. Hann du inte testa? Skriv i stället ner
+vad som stod i vägen, det är också värdefullt att dela på halvdag 2.
 
 Vad fungerade?
 ___________________________________________________________________
@@ -98,7 +88,24 @@ Vad borde agenten göra bättre nästa gång?
 ___________________________________________________________________
 
 Ta med anteckningarna till halvdag 2. Vi börjar dagen med att dela vad
-ni byggt och vad som överraskade er.
+ni testat och vad som överraskade er.
+
+
+DEL 2B · FÄRDIGSTÄLL DESIGNEN
+(halvdag 2, punkt 0)
+
+De två sista fälten, nu när skissen har mötts av verkligheten:
+
+Målgrupp
+Vem använder den, bara du eller fler i teamet?
+___________________________________________________________________
+
+Human in the loop
+Var i processen måste en människa godkänna innan något går vidare?
+___________________________________________________________________
+
+Presentera designen för en annan grupp och samla feedbacken här:
+___________________________________________________________________
 
 
 OBS · TVÅ SPÅR PÅ HALVDAG 2
@@ -112,7 +119,7 @@ tar själv.
 
 
 DEL 4 · STRESSTESTA OCH FÖRBÄTTRA
-(halvdag 2, punkt 3)
+(halvdag 2, punkt 2 och 4, under bygg-passen)
 
 Kör din agent version 1 genom fyra typer av påfrestning och notera vad
 som händer:
