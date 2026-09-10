@@ -8,37 +8,31 @@ i ett dokument eller direkt i det AI-verktyg du bygger i.
 DEL 1 · KARTLÄGG VAD DU VILL LÖSA
 (halvdag 1, punkt 4)
 
-Välj antingen en verklig arbetsuppgift som återkommer i din vardag,
-till exempel introduktion av nya medarbetare, medarbetarsamtal,
-kampanjplanering, veckomöten, kompetensutveckling, kundfeedback, eller
-ett problem du brottas med, till exempel bristande överblick över
-försäljning mellan butiker eller otydligt bemanningsläge. Många av de
-starkaste agenterna löser inte ett arbetsflöde, de löser att du saknar
-koll, ofta via en dashboard. Välj gärna något du redan känner en gnutta
-irritation över.
+Välj det som känns mest angeläget, ett arbetsflöde som återkommer eller
+något du helt enkelt inte har koll på. Fundera utifrån frågorna nedan,
+skriv sedan ner med egna ord vad du landar i.
+
+1. Vad är den största tidstjuven i din vecka?
+   ___________________________________________________________________
+
+2. Var kör det ofta fast, en flaskhals som bromsar dig eller andra?
+   ___________________________________________________________________
+
+3. Vad skulle du vilja ha koll på utan att behöva leta efter det?
+   ___________________________________________________________________
+
+4. Vilket beslut skulle bli lättare om du hade rätt information framför
+   dig?
+   ___________________________________________________________________
+
+5. Vad skjuter du gärna upp, fast du vet att det måste göras?
+   ___________________________________________________________________
+
+6. Vilken fråga får du oftast från ditt team, som du skulle vilja svara
+   på snabbare?
+   ___________________________________________________________________
 
 Det jag vill lösa: _______________________________________________
-
-1. Vad sätter igång processen, eller när märker du av problemet? (Ett
-   datum, ett mejl, en signal från någon annan, eller ett återkommande
-   tillfälle där du önskar du hade bättre koll?)
-   ___________________________________________________________________
-
-2. Vilken information behövs för att göra jobbet, eller för att få
-   överblicken?
-   ___________________________________________________________________
-
-3. Vilka beslut fattas, eller borde fattas, utifrån det?
-   ___________________________________________________________________
-
-4. Vad tar mest tid, det som faktiskt kräver ditt omdöme eller det som
-   bara är hantverk (leta fram, sammanställa, formatera)?
-   ___________________________________________________________________
-
-5. Var skulle AI kunna hjälpa till, med ett utkast, en sammanställning
-   eller en dashboard att checka av, och var vill du absolut inte
-   släppa in den?
-   ___________________________________________________________________
 
 
 DEL 2A · BÖRJA SKISSA PÅ DIN AGENT
