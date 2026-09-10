@@ -64,7 +64,9 @@ ___________________________________________________________________
 
 Begränsningar
 Vad ska agenten aldrig göra på egen hand? Vilken information får den
-aldrig se (tänk GDPR: personnummer, löner, medicinska uppgifter)?
+aldrig se (tänk GDPR: personnummer, löner, medicinska uppgifter)? Samma
+tänk som Human in the Loop från teoripasset, ni formaliserar var i
+processen en människa måste godkänna på halvdag 2.
 ___________________________________________________________________
 
 
