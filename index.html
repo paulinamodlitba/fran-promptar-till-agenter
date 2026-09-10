@@ -184,31 +184,35 @@
 
   <section>
     <h2>Halvdag 1 &middot; Från promptar till arbetsflöden</h2>
-    <p class="note">Tiderna är ungefärliga och kan justeras något på plats.</p>
+    <p class="note">Tiderna är ungefärliga och kan justeras något på plats. Paus klockan 10.00 båda halvdagarna.</p>
 
     <ul class="rundown">
-      <li><span class="time">09.00&ndash;09.15</span><span class="name">Incheckning<em>0</em></span><span class="n">15 min</span></li>
-      <li><span class="time">09.15&ndash;09.50</span><span class="name">Vad är en agent?<em>1</em></span><span class="n">35 min</span></li>
-      <li><span class="time">09.50&ndash;10.20</span><span class="name">Human in the Loop<em>2</em></span><span class="n">30 min</span></li>
-      <li class="pause"><span class="time">10.20&ndash;10.40</span><span class="name">Paus</span><span class="n">20 min</span></li>
-      <li><span class="time">10.40&ndash;11.30</span><span class="name">Kartlägg arbetsflöde<em>3</em></span><span class="n">50 min</span></li>
-      <li><span class="time">11.30&ndash;12.15</span><span class="name">Designa din agent<em>4</em></span><span class="n">45 min</span></li>
+      <li><span class="time">09.00&ndash;09.10</span><span class="name">Incheckning<em>0</em></span><span class="n">10 min</span></li>
+      <li><span class="time">09.10&ndash;10.00</span><span class="name">Teori<em>1</em></span><span class="n">50 min</span></li>
+      <li class="pause"><span class="time">10.00&ndash;10.20</span><span class="name">Paus</span><span class="n">20 min</span></li>
+      <li><span class="time">10.20&ndash;10.50</span><span class="name">Demo: riktiga agenter<em>2</em></span><span class="n">30 min</span></li>
+      <li><span class="time">10.50&ndash;11.20</span><span class="name">Testa själv<em>3</em></span><span class="n">30 min</span></li>
+      <li><span class="time">11.20&ndash;12.05</span><span class="name">Kartlägg arbetsflöde<em>4</em></span><span class="n">45 min</span></li>
+      <li><span class="time">12.05&ndash;12.25</span><span class="name">Börja skissa din agent<em>5</em></span><span class="n">20 min</span></li>
+      <li class="pause"><span class="time">12.25&ndash;12.30</span><span class="name">Hemuppgift</span><span class="n">5 min</span></li>
     </ul>
 
     <ol class="impl">
       <li>
-        <p class="tag">Punkt 1 &middot; föreläsning, 35 min</p>
+        <p class="tag">Punkt 0 &middot; 10 min</p>
+        <h3>Incheckning</h3>
+        <p>Snabb runda: hur van är du vid AI idag, och vilka verktyg använder du redan? Bra tillfälle att också se vem i rummet som har en betalversion, det blir relevant om en liten stund.</p>
+      </li>
+      <li>
+        <p class="tag">Punkt 1 &middot; teori, 50 min</p>
         <h3>Vad är egentligen en AI-agent?</h3>
-        <p>Skillnaden mellan en prompt, en anpassad GPT, en agent och ett helt arbetsflöde. En anpassad GPT eller ett Claude Project är fortfarande en konfigurerad assistent, den agerar bara när du promptar den. En riktig agent tar flera steg själv och kan jobba vidare utan att du styr varje steg, till exempel Claude Cowork, ChatGPT Work eller en agent byggd i Microsoft Copilot Studio. Vi visar skillnaden live under halvdag 2. Exempel från handel, HR, kundservice och ledarskap.</p>
+        <p>Skillnaden mellan en prompt, en anpassad GPT, en agent och ett helt arbetsflöde. En anpassad GPT eller ett Claude Project är fortfarande en konfigurerad assistent, den agerar bara när du promptar den. En riktig agent tar flera steg själv och kan jobba vidare utan att du styr varje steg, till exempel Claude Cowork, ChatGPT Work eller en agent byggd i Microsoft Copilot Studio. Vi visar skillnaden live om en stund.</p>
         <blockquote class="callout" style="margin-top:16px">
           <p>Vilka delar av ditt arbete upprepas ofta?</p>
           <cite>Diskussionsfråga</cite>
         </blockquote>
-      </li>
-      <li>
-        <p class="tag">Punkt 2 &middot; föreläsning + övning, 30 min</p>
-        <h3>Human in the Loop</h3>
-        <p>När ska AI få agera själv, och när måste en människa fatta beslutet? Deltagarna får 20 minuter på sig att placera arbetsuppgifter i tre risknivåer. De sista 10 minuterna jämför ni svaren i helgrupp: var skiljde sig era svar åt, och varför? Oenigheten är själva poängen, inte ett tecken på att övningen gick fel.</p>
+        <h3 style="margin-top:24px">Human in the Loop</h3>
+        <p>När ska AI få agera själv, och när måste en människa fatta beslutet? Risknivån avgör, inte uppgiften i sig.</p>
         <ul class="legend">
           <li class="green"><b>AI kan göra själv</b><p>Låg risk, lätt att rätta till</p></li>
           <li class="yellow"><b>AI föreslår, människa godkänner</b><p>Medelrisk, behöver ett omdöme</p></li>
@@ -221,9 +225,21 @@
           <span class="chip">Medarbetarsamtal</span>
           <span class="chip">Kundklagomål</span>
         </div>
+        <h3 style="margin-top:24px">Säkerhet</h3>
+        <p>En agent som agerar själv kan också agera fel snabbare än en människa hinner upptäcka det. Därför är begränsningar-fältet i din agentdesign lika viktigt som syfte och output, och därför testar vi allt innan det används skarpt på halvdag 2. Ladda aldrig upp känsliga personuppgifter (personnummer, löner, medicinska detaljer) i ett AI-verktyg, se GDPR-rutan längre ner på sidan.</p>
       </li>
       <li>
-        <p class="tag">Punkt 3 &middot; workshop, 50 min</p>
+        <p class="tag">Punkt 2 &middot; demonstration, 30 min</p>
+        <h3>Demo: riktiga agenter</h3>
+        <p>Paulina visar hur samma uppgift löses live i alla tre, från start i betalversionerna, inte gratislägena: en agent i Microsoft Copilot, ChatGPT Work och Claude Cowork/Code. Ni ser vad som faktiskt skiljer en riktig agent från en konfigurerad assistent, den tar flera steg själv och kan fortsätta jobba utan att ni styr varje del.</p>
+      </li>
+      <li>
+        <p class="tag">Punkt 3 &middot; 30 min</p>
+        <h3>Testa själv</h3>
+        <p>Har du redan en betalversion? Öppna den och testa något enkelt direkt i den riktiga agentmiljön. Har du inte det, kör du på gratisnivån i Claude, ChatGPT eller Copilot, se guiderna längre ner på sidan, eller sätt dig ihop med någon som har tillgång.</p>
+      </li>
+      <li>
+        <p class="tag">Punkt 4 &middot; workshop, 45 min</p>
         <h3>Kartlägg ett eget arbetsflöde</h3>
         <p>Välj en verklig arbetsuppgift, till exempel introduktion av nya medarbetare, medarbetarsamtal, kampanjplanering, veckomöten, kompetensutveckling eller kundfeedback, och kartlägg den:</p>
         <dl>
@@ -235,78 +251,71 @@
         </dl>
       </li>
       <li>
-        <p class="tag">Punkt 4 &middot; workshop, 45 min</p>
-        <h3>Designa din agent</h3>
-        <p>Bygg första versionen på papper: syfte, målgrupp, input, output, begränsningar och var en människa måste in i loopen. Jobba i par eller en trio, gärna samma personer båda halvdagarna. Det gör återkopplingen på halvdag 2 mycket enklare. Presentera för en annan grupp och få feedback.</p>
+        <p class="tag">Punkt 5 &middot; workshop, 20 min</p>
+        <h3>Börja skissa din agent</h3>
+        <p>Utifrån kartläggningen, en första skiss av fyra fält: syfte, input, output och begränsningar. Jobba i par eller en trio, gärna samma personer båda halvdagarna, det gör återkopplingen på halvdag 2 mycket enklare. Målgrupp och human in the loop fyller ni i tillsammans med resten av designen på halvdag 2, det finns inte tid att hinna med allt idag, och det är okej.</p>
         <blockquote class="callout" style="margin-top:16px">
           <p>Exempel: en agent som hjälper en regionchef att prioritera veckan. Input: veckorapporter, försäljningsdata, HR-policy. Output: en prioriterad åtgärdslista. Begränsning: fattar aldrig personalbeslut själv.</p>
-          <cite>Så konkret bör designen bli</cite>
+          <cite>Så konkret bör skissen bli</cite>
         </blockquote>
       </li>
     </ol>
 
     <div class="homework">
       <p class="tag">Hemuppgift, till halvdag 2</p>
-      <h3>Testa agentdesignen i praktiken</h3>
-      <p>Under de kommande två veckorna: testa idén, även om den bara finns på papper än så länge. Dokumentera vad som fungerade, vad som inte gjorde det, vilken information som saknades och vad agenten borde göra bättre. Hann du inte testa? Berätta i stället vad som stod i vägen, minst lika värdefullt att dela. Ta med anteckningarna till nästa tillfälle.</p>
+      <h3>Fortsätt tänka på din skiss</h3>
+      <p>Under de kommande två veckorna: fundera vidare på skissen, testa den gärna i praktiken om du hinner, även om den bara finns på papper än så länge. Dokumentera vad som fungerade, vad som inte gjorde det, vilken information som saknades och vad agenten borde göra bättre. Hann du inte testa? Berätta i stället vad som stod i vägen, minst lika värdefullt att dela. Ta med anteckningarna till nästa tillfälle, vi börjar dagen med att färdigställa designen tillsammans.</p>
     </div>
   </section>
 
   <section>
     <h2>Halvdag 2 &middot; Bygg din första AI-agent</h2>
-    <p class="note">Två veckor senare, med samma grupper som halvdag 1.</p>
+    <p class="note">Två veckor senare, med samma grupper som halvdag 1. Paus klockan 10.00, precis som halvdag 1.</p>
 
     <ul class="rundown">
-      <li><span class="time">09.00&ndash;09.20</span><span class="name">Återkoppling<em>0</em></span><span class="n">20 min</span></li>
-      <li><span class="time">09.20&ndash;09.50</span><span class="name">Bygg i praktiken<em>1</em></span><span class="n">30 min</span></li>
-      <li><span class="time">09.50&ndash;10.40</span><span class="name">Bygg agent v1<em>2</em></span><span class="n">50 min</span></li>
-      <li class="pause"><span class="time">10.40&ndash;11.00</span><span class="name">Paus</span><span class="n">20 min</span></li>
-      <li><span class="time">11.00&ndash;11.45</span><span class="name">Stresstesta<em>3</em></span><span class="n">45 min</span></li>
-      <li><span class="time">11.45&ndash;12.15</span><span class="name">Agent-review<em>4</em></span><span class="n">30 min</span></li>
-      <li><span class="time">12.15&ndash;12.30</span><span class="name">Nästa steg<em>5</em></span><span class="n">15 min</span></li>
+      <li><span class="time">09.00&ndash;09.30</span><span class="name">Färdigställ designen<em>0</em></span><span class="n">30 min</span></li>
+      <li><span class="time">09.30&ndash;10.00</span><span class="name">Börja bygga<em>1</em></span><span class="n">30 min</span></li>
+      <li class="pause"><span class="time">10.00&ndash;10.20</span><span class="name">Paus</span><span class="n">20 min</span></li>
+      <li><span class="time">10.20&ndash;10.50</span><span class="name">Fortsätt bygga<em>2</em></span><span class="n">30 min</span></li>
+      <li><span class="time">10.50&ndash;11.00</span><span class="name">Visa för en kompis<em>3</em></span><span class="n">10 min</span></li>
+      <li><span class="time">11.00&ndash;11.45</span><span class="name">Fortsätt bygga<em>4</em></span><span class="n">45 min</span></li>
+      <li><span class="time">11.45&ndash;12.30</span><span class="name">Demo och avrundning<em>5</em></span><span class="n">45 min</span></li>
     </ul>
 
     <ol class="impl">
       <li>
-        <p class="tag">Punkt 0 &middot; 20 min</p>
-        <h3>Återkoppling från hemuppgiften</h3>
-        <p>Deltagarna delar vad de byggde, vad de lärde sig och vad som överraskade dem, i samma par eller trio som halvdag 1. Hann du inte testa? Dela vad som stod i vägen i stället, minst lika värdefullt för gruppen.</p>
+        <p class="tag">Punkt 0 &middot; 30 min</p>
+        <h3>Följ upp hemläxan, färdigställ designen</h3>
+        <p>Dela vad ni testat, vad som fungerade, vad som inte gjorde det, i samma par eller trio som halvdag 1. Hann du inte testa? Dela vad som stod i vägen i stället, minst lika värdefullt för gruppen. Fyll sedan i det som fattas i agentdesignen: målgrupp och var en människa måste in i loopen. Nu ska designen vara redo att byggas.</p>
       </li>
       <li>
-        <p class="tag">Punkt 1 &middot; demonstration, 30 min</p>
-        <h3>Så bygger man en agent i praktiken</h3>
-        <p>Paulina visar hur samma uppgift löses live i alla tre: Claude Cowork, ChatGPT Work och en agent i Microsoft Copilot Studio. En snabb runda, inte en djupdykning i något av dem, så ni ser vad som faktiskt skiljer en riktig agent från en konfigurerad assistent: den tar flera steg själv och kan fortsätta jobba utan att ni styr varje del.</p>
-      </li>
-      <li>
-        <p class="tag">Punkt 2 &middot; workshop, 50 min</p>
-        <h3>Bygg agent version 1</h3>
-        <p>Deltagarna bygger sin egen agent, i det verktyg de själva väljer. Paulina coachar. Målet är en fungerande första version, inte en färdig lösning.</p>
+        <p class="tag">Punkt 1 &middot; workshop, 30 min</p>
+        <h3>Börja bygga</h3>
+        <p>Sätt igång i det verktyg du själv väljer. Paulina coachar.</p>
         <blockquote class="callout" style="margin-top:16px">
-          <p>Har du redan tillgång till Claude Cowork, ChatGPT Work eller Copilot Studio? Bygg din design direkt där, det är den riktiga versionen. Annars bygger du vidare i Claude Projects, ChatGPT eller Copilot-chatt. Samma design fungerar i båda spåren, skillnaden är hur många steg verktyget tar själv. Ingen behöver ha köpt något för att hänga med.</p>
+          <p>Har du en betalversion? Bygg din design direkt i den riktiga agentmiljön. Annars bygger du i Claude Projects, ChatGPT eller Copilot-chatt, eller sätter dig ihop med någon som har tillgång. Samma design fungerar i båda spåren, skillnaden är hur många steg verktyget tar själv.</p>
           <cite>Två spår, samma design</cite>
         </blockquote>
       </li>
       <li>
-        <p class="tag">Punkt 3 &middot; workshop, 45 min</p>
-        <h3>Stresstesta och förbättra agenten</h3>
-        <p>Utsätt agenten för:</p>
-        <ul>
-          <li>Otydliga instruktioner</li>
-          <li>Felaktig input</li>
-          <li>Ofullständig information</li>
-          <li>Svåra edge cases från er egen vardag</li>
-        </ul>
-        <p style="margin-top:10px">Förbättra instruktionerna utifrån det ni ser.</p>
+        <p class="tag">Punkt 2 &middot; workshop, 30 min</p>
+        <h3>Fortsätt bygga</h3>
+        <p>Testa vad som händer med otydliga instruktioner, felaktig input eller ofullständig information. Förbättra instruktionerna utifrån det du ser, målet är en fungerande första version, inte en färdig lösning.</p>
       </li>
       <li>
-        <p class="tag">Punkt 4 &middot; 30 min</p>
-        <h3>Agent-review</h3>
-        <p>Deltagarna testar varandras lösningar och ger feedback: vad fungerar, vad är otydligt, vilket värde skapas, vilka risker finns.</p>
+        <p class="tag">Punkt 3 &middot; 10 min</p>
+        <h3>Visa för en kompis</h3>
+        <p>Visa upp det halvfärdiga bygget för någon annan i rummet. Vad är tydligt, vad är fortfarande oklart?</p>
       </li>
       <li>
-        <p class="tag">Punkt 5 &middot; 15 min</p>
-        <h3>Nästa steg</h3>
-        <p>Kort skriftlig reflektion, några minuter var: var hittar du fler användningsområden, hur introducerar du det här i ditt team, vilka arbetsflöden bör du börja med och vilka bör du undvika. Dela en av svaren i helgrupp innan ni avslutar.</p>
+        <p class="tag">Punkt 4 &middot; workshop, 45 min</p>
+        <h3>Fortsätt bygga</h3>
+        <p>Utveckla vidare utifrån feedbacken. Testa ett svårt edge case från din egen vardag innan tiden är slut.</p>
+      </li>
+      <li>
+        <p class="tag">Punkt 5 &middot; 45 min</p>
+        <h3>Demo och avrundning</h3>
+        <p>Deltagarna visar och ger feedback på varandras lösningar: vad fungerar, vad är otydligt, vilket värde skapas, vilka risker finns. Vi avslutar med hur ni tar arbetet vidare: var hittar ni fler användningsområden, hur introducerar ni det här i teamet, vilka arbetsflöden bör ni börja med och vilka bör ni undvika.</p>
         <blockquote class="callout" style="margin-top:16px">
           <p>Om vi träffas igen om sex månader, vilken agent hoppas du använda varje vecka?</p>
           <cite>Avslutande fråga</cite>
