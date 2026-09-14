@@ -382,13 +382,144 @@
   </section>
 
   <section>
+    <h2>Riktiga agenter, steg för steg</h2>
+    <p class="note">Det här är en guide för dig som har en betalversion: Claude Cowork/Code, ChatGPT Work, eller Microsoft Copilot med Agent Builder eller Copilot Studio. Har du bara gratisversionen, se gratisspåret nedan i stället.</p>
+
+    <div class="toolbar">
+      <button class="tool-btn active" onclick="showTool('claude-real', event)">Claude Cowork</button>
+      <button class="tool-btn" onclick="showTool('chatgpt-real', event)">ChatGPT Work</button>
+      <button class="tool-btn" onclick="showTool('copilot-real', event)">Microsoft Copilot</button>
+    </div>
+
+    <div id="claude-real" class="tool-content active">
+      <div class="steps">
+        <div class="step">
+          <span class="step-number">01</span>
+          <div>
+            <div class="step-title">Öppna Cowork-fliken</div>
+            <div class="step-description">I Claude Desktop-appen, bredvid Chat och Code. Kräver Pro-plan eller högre.</div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">02</span>
+          <div>
+            <div class="step-title">Ge den ett mål i vanligt språk</div>
+            <div class="step-description">Beskriv vad du vill ha gjort, utifrån din agentdesign: syfte, input, output, begränsningar.</div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">03</span>
+          <div>
+            <div class="step-title">Peka ut underlaget</div>
+            <div class="step-description">En mapp med filer, eller dokument du laddar upp direkt i konversationen.</div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">04</span>
+          <div>
+            <div class="step-title">Beskriv vad som ska levereras</div>
+            <div class="step-description">Ett dokument, en dashboard, ett kalkylark, en presentation. Ju konkretare, desto bättre resultat.</div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">05</span>
+          <div>
+            <div class="step-title">Låt den jobba, granska sedan</div>
+            <div class="step-description">Cowork kan ta flera steg själv. Du behåller kontrollen genom att godkänna innan viktiga steg, precis som er human in the loop-design.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="chatgpt-real" class="tool-content">
+      <div class="steps">
+        <div class="step">
+          <span class="step-number">01</span>
+          <div>
+            <div class="step-title">Ladda ner ChatGPT-datorappen</div>
+            <div class="step-description">Chatt, Work och Codex finns där på alla abonnemang, störst skillnad på webb/mobil är att Work där kräver Plus/Pro/Business/Enterprise.</div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">02</span>
+          <div>
+            <div class="step-title">Välj Work, ge den ett mål</div>
+            <div class="step-description">Beskriv uppgiften utifrån din agentdesign, i vanligt språk.</div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">03</span>
+          <div>
+            <div class="step-title">Anslut relevanta källor</div>
+            <div class="step-description">Google Drive, SharePoint, e-post, eller ladda upp filer direkt, om du har pluginprogram kopplade.</div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">04</span>
+          <div>
+            <div class="step-title">Beskriv vad som ska levereras</div>
+            <div class="step-description">Ett kalkylark, en presentation, ett dokument, en sajt. Nämn format och mottagare.</div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">05</span>
+          <div>
+            <div class="step-title">Följ upp och styr</div>
+            <div class="step-description">Du kan granska framsteg, svara på frågor och godkänna viktiga åtgärder medan den jobbar.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="copilot-real" class="tool-content">
+      <div class="steps">
+        <div class="step">
+          <span class="step-number">01</span>
+          <div>
+            <div class="step-title">Öppna Agent Builder eller Copilot Studio</div>
+            <div class="step-description">Agent Builder finns inne i Microsoft 365 Copilot Chat. Har du Copilot Studio, gå till copilotstudio.microsoft.com i stället.</div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">02</span>
+          <div>
+            <div class="step-title">Namnge agenten, skriv instruktioner</div>
+            <div class="step-description">Roll och mål, vad som ingår och inte, ton, och när den ska fråga eller agera. Utgå från din agentdesign.</div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">03</span>
+          <div>
+            <div class="step-title">Lägg till Kunskap</div>
+            <div class="step-description">Ladda upp underlaget agenten ska känna till, eller koppla webbsökning för aktuell information.</div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">04</span>
+          <div>
+            <div class="step-title">Lägg till Verktyg, om du vill att den ska agera</div>
+            <div class="step-description">Kopplar agenten till system och åtgärder, inte bara svar. Kräver ofta mer förberedelse, hoppa över om du bara vill ha en frågande agent.</div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">05</span>
+          <div>
+            <div class="step-title">Testa med en riktig fråga</div>
+            <div class="step-description">Ställ en fråga som kräver att den väger flera källor mot varandra, justera instruktionerna utifrån svaret.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
     <h2>Gratisspåret, steg för steg</h2>
     <p class="note">Det här är en guide för dig som kör med gratisversionen av verktygen: Claude Projects, ChatGPT och Copilot-chatt. Har du redan Claude Cowork, ChatGPT Work eller Microsoft Copilot med Agent Builder eller Copilot Studio? Bygg din design direkt där i stället, samma principer gäller.</p>
 
     <div class="toolbar">
-      <button class="tool-btn active" onclick="showTool('claude', event)">Claude</button>
-      <button class="tool-btn" onclick="showTool('chatgpt', event)">ChatGPT</button>
-      <button class="tool-btn" onclick="showTool('copilot', event)">Microsoft Copilot</button>
+      <button class="tool-btn active" onclick="showTool('claude-tool', event)">Claude</button>
+      <button class="tool-btn" onclick="showTool('chatgpt-tool', event)">ChatGPT</button>
+      <button class="tool-btn" onclick="showTool('copilot-tool', event)">Microsoft Copilot</button>
     </div>
 
     <div id="claude-tool" class="tool-content active">
@@ -530,9 +661,10 @@
 
 <script>
   function showTool(tool, evt){
-    document.querySelectorAll('.tool-content').forEach(function(el){ el.classList.remove('active'); });
-    document.querySelectorAll('.tool-btn').forEach(function(el){ el.classList.remove('active'); });
-    document.getElementById(tool + '-tool').classList.add('active');
+    var scope = evt.currentTarget.closest('section');
+    scope.querySelectorAll('.tool-content').forEach(function(el){ el.classList.remove('active'); });
+    scope.querySelectorAll('.tool-btn').forEach(function(el){ el.classList.remove('active'); });
+    document.getElementById(tool).classList.add('active');
     evt.currentTarget.classList.add('active');
   }
 </script>
