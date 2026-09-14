@@ -113,8 +113,8 @@ ___________________________________________________________________
 OBS · TVÅ SPÅR PÅ HALVDAG 2
 
 Har du redan tillgång till Claude Cowork, ChatGPT Work eller en agent
-i Microsoft Copilot Studio? Bygg din design direkt där, det är den
-riktiga agent-versionen. Om du inte har det, bygger du vidare i Claude
+i Microsoft Copilot (Agent Builder eller Copilot Studio)? Bygg din
+design direkt där, det är den riktiga agent-versionen. Om du inte har det, bygger du vidare i Claude
 Projects, ChatGPT eller Copilot-chatt, precis som halvdag 1. Samma
 design fungerar i båda spåren, skillnaden är hur många steg verktyget
 tar själv.
