@@ -1,0 +1,120 @@
+SÅ HÄR TESTAR DU CLAUDE PROJECTS SJÄLV
+
+=== STEG 1: SKAPA ETT GRATIS CLAUDE-KONTO ===
+
+1. Gå till claude.ai
+2. Skapa konto (kan använda Google/email)
+3. Gratis plan räcker för att testa!
+
+=== STEG 2: SKAPA DITT FÖRSTA PROJECT ===
+
+1. Klicka på "Projects" i vänstermenyn
+2. Klicka "Create Project"
+3. Namnge det t.ex. "Min Chef-Agent"
+
+=== STEG 3: LADDA UPP FILERNA FRÅN WORKSHOPEN ===
+
+1. I ditt project, klicka "Add Content"
+2. Ladda upp filerna du fick från workshopen:
+   - Alla 5 veckorapporter från butikscheferna
+   - Försäljningsdatan
+   - HR-policyn
+
+Du kan också lägga till egna dokument från din arbetsvardag!
+
+=== STEG 4: GE CLAUDE INSTRUKTIONER (CUSTOM INSTRUCTIONS) ===
+
+Klicka på "Set custom instructions" och skriv något i stil med:
+
+```
+Du är en AI-agent som hjälper mig som regionchef att analysera veckorapporter från mina butikschefer. 
+
+När jag frågar dig, ska du:
+1. Läsa alla tillgängliga veckorapporter och försäljningsdata
+2. Identifiera mönster, problem och framgångar
+3. Prioritera vad som behöver min uppmärksamhet som chef
+4. Föreslå konkreta åtgärder och uppföljningsfrågor
+5. Basera dina svar på både HR-policyn och försäljningsdata
+
+Var koncis men insiktsfull. Fokusera på ledarskap, inte bara siffror.
+```
+
+=== STEG 5: STÄLL FRÅGOR! ===
+
+Prova dessa exempel-prompts:
+
+**Enkel översikt:**
+"Ge mig en prioriterad sammanfattning av vad jag bör agera på den här veckan baserat på alla rapporter."
+
+**Djupare analys:**
+"Vilka butikschefer verkar behöva mest stöd just nu, och varför? Föreslå konkreta sätt jag kan hjälpa dem."
+
+**Specifik fråga:**
+"Thomas i Uppsala rapporterar personalkonflikter. Vad säger HR-policyn om detta och vad ska jag göra?"
+
+**Förberedelse inför 1-on-1:**
+"Jag ska ha 1-on-1 med Erik i Malmö imorgon. Baserat på hans rapport och försäljningsdata, vad bör jag fokusera på i samtalet?"
+
+**Jämförande analys:**
+"Jämför Linda i Göteborg (som går bra) med Erik i Malmö (som kämpar). Vad kan vi lära av skillnaderna?"
+
+**Trendspotting:**
+"Finns det några mönster över alla butiker som jag bör vara medveten om?"
+
+=== TIPS FÖR BRA RESULTAT ===
+
+✅ Var specifik i dina frågor
+✅ Be om konkreta exempel och åtgärder
+✅ Följ upp med fördjupningsfrågor
+✅ Testa att be om olika format: "ge mig som bullet points" eller "skriv ett utkast till mail"
+
+❌ Förvänta dig inte att agenten gör BESLUT åt dig - den ger underlag
+❌ Dubbelkolla alltid känslig information
+❌ Lita inte blint - använd ditt eget omdöme
+
+=== VAD KAN DU GÖRA MED EGNA FILER? ===
+
+Du kan ladda upp (nästan) vilka filer som helst:
+- Veckorapporter från ditt team
+- Försäljningsdata (Excel, CSV, PDF)
+- HR-dokument och policys
+- Kundrecensioner
+- Mötesprotokoller
+- Strategidokument
+
+Begränsningar på gratis plan:
+- Max 5 Projects
+- Begränsat antal meddelanden/dag (brukar räcka för testande)
+
+På betald plan (Claude Pro: ~$20/mån):
+- Fler projects
+- Fler meddelanden
+- Större filer
+
+=== SEKRETESS OCH GDPR ===
+
+VIKTIGT att veta:
+- Ladda INTE upp känsliga personuppgifter (personnummer, löner, medicinska detaljer)
+- Anonymisera data om du testar med riktiga medarbetarrapporter
+- På gratisversionen används dina konversationer för att träna AI:n
+- På Claude Pro/Team-plan kan du välja bort det
+- Läs mer: claude.ai/privacy
+
+För företagsbruk: Kolla med IT/GDPR-ansvarig först!
+
+=== NÄSTA STEG ===
+
+När du testat grunderna:
+
+1. **Experimentera med olika typer av filer från din vardag**
+2. **Förfina dina Custom Instructions** - ju tydligare du är, desto bättre resultat
+3. **Utforska Claude Team** om du vill dela projects med kollegor
+4. **Läs dokumentationen:** docs.claude.com
+
+=== FRÅGOR? ===
+
+Kontakta mig: paulina.modlitba@gmail.com
+
+Eller använd Claude för att hjälpa dig! Skriv: "Hur kan jag förbättra mina custom instructions?" eller "Förklara hur jag bäst använder Projects för [ditt användningsfall]"
+
+Lycka till! 🚀

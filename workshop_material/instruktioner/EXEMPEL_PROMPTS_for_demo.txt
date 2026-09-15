@@ -1,0 +1,197 @@
+EXEMPEL-PROMPTS FÖR DEMO
+(Använd dessa för att visa vad agenten kan göra)
+
+=== GRUNDLÄGGANDE ÖVERSIKT ===
+
+Prompt 1 (Enkel sammanfattning):
+"Ge mig en kort sammanfattning av läget i alla butiker denna vecka. 
+Max 200 ord."
+
+Förväntat resultat: Koncis översikt som chef kan läsa på 1 minut
+
+
+Prompt 2 (Prioriterad lista):
+"Baserat på alla veckorapporter och försäljningsdata - 
+vad behöver min omedelbara uppmärksamhet som regionchef? 
+Prioritera från viktigast till minst viktigt."
+
+Förväntat resultat: Tydlig prioritering med motivering
+
+
+=== PERSONALFRÅGOR ===
+
+Prompt 3 (Identifiera behov):
+"Vilka butikschefer verkar behöva stöd just nu, och på vilket sätt? 
+Basera på både vad de skriver och hur försäljningen går."
+
+Förväntat resultat: Analys som kombinerar mjuk och hård data
+
+
+Prompt 4 (HR-policy koppling):
+"Thomas i Uppsala rapporterar personalkonflikter. 
+Vad säger vår HR-policy om detta och vad är mina nästa steg?"
+
+Förväntat resultat: Konkret vägledning baserad på policy
+
+
+Prompt 5 (Förbered 1-on-1):
+"Jag ska ha 1-on-1 med Erik i Malmö imorgon. 
+Baserat på hans rapport och försäljningssiffror - 
+vad bör jag ta upp? Ge mig 3-5 konkreta diskussionspunkter."
+
+Förväntat resultat: Strukturerad mötesagenda
+
+
+=== FÖRSÄLJNINGSANALYS ===
+
+Prompt 6 (Jämförande analys):
+"Jämför Linda i Göteborg (som går bra) med Erik i Malmö (som kämpar). 
+Vad kan förklara skillnaden? Finns det något vi kan lära?"
+
+Förväntat resultat: Insikter om framgångsfaktorer
+
+
+Prompt 7 (Mönsterigenkänning):
+"Finns det några mönster eller trender över alla butiker som 
+jag borde vara medveten om?"
+
+Förväntat resultat: Strukturella/regionala insights
+
+
+Prompt 8 (Produktanalys):
+"Vilka produktkategorier går bäst/sämst? 
+Vad rekommenderar du baserat på det?"
+
+Förväntat resultat: Sortimentsinsikter
+
+
+=== OPERATIVA FRÅGOR ===
+
+Prompt 9 (Incident-uppföljning):
+"Stockholm rapporterar kassasystemstopp. Västerås har konflikt om retur. 
+Behöver jag göra något systemiskt eller är det isolerade händelser?"
+
+Förväntat resultat: Bedömning av om detta är ett mönster
+
+
+Prompt 10 (Rekryteringsbehov):
+"Ge mig en översikt över personalsituationen: 
+Vem behöver rekrytera? Vem har kapacitetsproblem?"
+
+Förväntat resultat: Personalplanering-insikter
+
+
+=== FÖRDJUPNING OCH SPECIFIKA FORMAT ===
+
+Prompt 11 (Utkast till mail):
+"Skriv ett uppmuntrande men konstruktivt mail till Erik i Malmö 
+baserat på hans rapport. Visa att jag förstår utmaningarna 
+men också vill stötta honom framåt."
+
+Förväntat resultat: Färdigt mailutkast som du kan redigera
+
+
+Prompt 12 (Åtgärdsplan):
+"Baserat på alla rapporter - skapa en prioriterad åtgärdslista för mig 
+som regionchef för nästa två veckor. Inkludera vem jag ska kontakta 
+och vad jag ska göra."
+
+Förväntat resultat: Konkret action plan
+
+
+Prompt 13 (Positiv förstärkning):
+"Vad går riktigt bra just nu som jag borde lyfta fram och fira med teamet?"
+
+Förväntat resultat: Identifiering av framgångar att förstärka
+
+
+=== UTMANANDE / KRITISKT TÄNKANDE ===
+
+Prompt 14 (Ifrågasätt data):
+"Finns det några diskrepanser mellan vad butikscheferna rapporterar 
+och vad försäljningssiffrorna säger?"
+
+Förväntat resultat: Objektiv analys av självrapportering vs. data
+
+
+Prompt 15 (Riskbedömning):
+"Vilka risker ser du baserat på rapporterna? 
+Vad kan gå fel om jag inte agerar?"
+
+Förväntat resultat: Proaktiv riskidentifiering
+
+
+Prompt 16 (Långsiktigt perspektiv):
+"Om nuvarande trender fortsätter - var kommer vi vara om 3 månader? 
+Vad bör jag göra NU för att påverka det?"
+
+Förväntat resultat: Strategisk framåtblick
+
+
+=== FÖLJDFRÅGOR (VISA INTERAKTIVITET) ===
+
+Efter första analysen, fråga:
+
+"Förklara mer om varför du tror Thomas behöver stöd"
+
+"Kan du ge konkreta exempel från rapporterna som stöder din analys?"
+
+"Vad skulle DU säga till Erik om du var i mitt läge?"
+
+"Rangordna butikerna efter vilka som behöver mest uppmärksamhet just nu"
+
+
+=== PROMPTS ATT UNDVIKA (VISA GRÄNSER) ===
+
+Exempel på vad du INTE ska be agenten om:
+
+❌ "Ska jag säga upp Thomas?" 
+   → Agenten ska inte fatta sådana beslut
+
+❌ "Vad är Eriks lön jämfört med andra?"
+   → Känslig information som inte ska hanteras i AI
+
+❌ "Diagnosticera Mohammeds sjukdom"
+   → Medicinsk bedömning är utanför scope
+
+
+=== TIPS FÖR BRA DEMO ===
+
+1. **Börja enkelt** (Prompt 1-2) för att bygga förtroende
+
+2. **Visa värde snabbt** (Prompt 5) - något de kan använda imorgon
+
+3. **Demonstrera nyans** (Prompt 14) - agenten kan ifrågasätta
+
+4. **Var transparent** - säg "detta är imponerande OCH vi måste granska"
+
+5. **Visa iteration** - ställ följdfrågor för att förfina
+
+6. **Erkänn begränsningar** - visa vad agenten INTE ska göra
+
+7. **Koppla till deras vardag** - "Hur lång tid tar detta för er idag?"
+
+
+=== BACKUP OM NÅGOT KRÅNGLAR ===
+
+Om Claude ger ett dåligt svar:
+"Det här var inte perfekt - låt mig visa hur vi kan förfina..."
+→ Ställ om frågan med mer kontext
+
+Om tekniken strular:
+"Detta är varför vi alltid har en backup-plan..."
+→ Växla till screenshots/förinspelad demo
+
+Om fråga du inte förberedde:
+"Utmärkt fråga! Låt mig testa det live..."
+→ Chans att visa flexibilitet
+
+
+=== EFTER DEMON ===
+
+Fråga gruppen:
+"Vad överraskade er mest?"
+"Vad skulle ni vilja testa först?"
+"Vilka frågeställningar saknade ni?"
+
+Detta ger dig värdefull feedback OCH engagerar dem.
