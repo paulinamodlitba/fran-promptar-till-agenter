@@ -84,6 +84,10 @@ tänk som Human in the Loop från teoripasset, ni formaliserar var i
 processen en människa måste godkänna på halvdag 2.
 ___________________________________________________________________
 
+Standardregel värd att skriva in, oavsett vad du bygger: "Fråga i
+stället för att gissa om något är oklart eller saknas." Enkel att lägga
+till, stor effekt på hur pålitlig agenten blir.
+
 
 DEL 3 · HEMUPPGIFT MELLAN TILLFÄLLENA
 (till nästa kurstillfälle)
