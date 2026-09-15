@@ -58,8 +58,8 @@ tidigare exempel, en mall)?
 ___________________________________________________________________
 
 Output
-Vad ska komma ut på andra sidan? Ett förslag, ett utkast, en analys,
-en prioriterad lista?
+Vad ska agenten leverera? Ett förslag, ett utkast, en analys, en
+prioriterad lista?
 ___________________________________________________________________
 
 Begränsningar
