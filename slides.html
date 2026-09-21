@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Från promptar till AI-agenter — bilderna</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F5F7;
+    --ink:#0F1317;
+    --grey:#6B7178;
+    --rule:#D3D7DC;
+    --mark:#00D689;
+    --mark-ink:#04321F;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:Archivo,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--mark-ink)}
+
+  .sheet{max-width:1040px;margin:0 auto;padding:40px 32px 64px}
+  @media (max-width:640px){.sheet{padding:28px 16px 48px}}
+
+  .masthead{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:baseline;justify-content:space-between;
+    padding-bottom:14px;border-bottom:1.5px solid var(--ink)}
+  .masthead .who{font-weight:600;color:var(--ink);font-size:14.5px}
+  .masthead nav a{color:var(--grey);font-size:13.5px;text-decoration:none;margin-left:20px}
+  .masthead nav a:hover{color:var(--ink)}
+
+  h1{font-size:clamp(1.6rem,4vw,2.4rem);line-height:1.1;letter-spacing:-0.02em;font-weight:600;margin:28px 0 6px;color:#D6432B}
+  .sub{color:var(--grey);font-size:15px;margin:0 0 28px}
+
+  .viewer{background:var(--ink);position:relative;aspect-ratio:16/9;width:100%;
+    display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .viewer img{max-width:100%;max-height:100%;display:block;user-select:none}
+
+  .viewer button.nav{position:absolute;top:0;bottom:0;width:15%;background:transparent;border:none;
+    color:#fff;font-size:28px;cursor:pointer;opacity:0;transition:opacity .15s ease;display:flex;align-items:center}
+  .viewer:hover button.nav{opacity:.85}
+  .viewer button.nav:hover{opacity:1}
+  .viewer button.prev{left:0;justify-content:flex-start;padding-left:14px;
+    background:linear-gradient(to right, rgba(0,0,0,.35), transparent)}
+  .viewer button.next{right:0;justify-content:flex-end;padding-right:14px;
+    background:linear-gradient(to left, rgba(0,0,0,.35), transparent)}
+
+  .controls{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:14px;flex-wrap:wrap}
+  .controls .count{font-size:13.5px;color:var(--grey);font-variant-numeric:tabular-nums}
+  .controls .right{display:flex;gap:10px;align-items:center}
+  .btn{background:var(--ink);color:var(--paper);border:none;padding:9px 16px;font-size:13.5px;font-weight:600;
+    cursor:pointer;font-family:inherit}
+  .btn:hover{background:var(--mark-ink)}
+  .btn:disabled{opacity:.35;cursor:default}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+  .btn.ghost:hover{background:#fff}
+
+  .strip{display:flex;gap:6px;overflow-x:auto;margin-top:18px;padding-bottom:8px;scrollbar-width:thin}
+  .strip button{flex:0 0 auto;width:34px;height:28px;border:1px solid var(--rule);background:#fff;color:var(--grey);
+    font-size:12px;font-family:inherit;cursor:pointer;font-variant-numeric:tabular-nums}
+  .strip button.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .strip button:hover:not(.active){border-color:var(--ink);color:var(--ink)}
+
+  .hint{color:var(--grey);font-size:12.5px;margin-top:10px}
+
+  footer{margin-top:56px;padding-top:16px;border-top:1.5px solid var(--ink);color:var(--grey);font-size:13.5px}
+</style>
+</head>
+<body>
+<main class="sheet">
+
+  <div class="masthead">
+    <p class="who">We Should Be Friends × Ledarna inom Handeln</p>
+    <nav>
+      <a href="index.html">Kurssajt</a>
+      <a href="slides.html">Bilderna</a>
+    </nav>
+  </div>
+
+  <h1>Från promptar till AI-agenter</h1>
+  <p class="sub">Presentationen från kursen, bild för bild. Använd pilarna eller piltangenterna för att bläddra.</p>
+
+  <div class="viewer" id="viewer">
+    <img id="slideImg" src="assets/slides/slide-01.jpg" alt="Bild 1 av 59">
+    <button class="nav prev" id="prevBtn" aria-label="Föregående bild">&#8249;</button>
+    <button class="nav next" id="nextBtn" aria-label="Nästa bild">&#8250;</button>
+  </div>
+
+  <div class="controls">
+    <span class="count" id="count">1 / 59</span>
+    <div class="right">
+      <button class="btn ghost" id="prevBtn2">&larr; Föregående</button>
+      <button class="btn ghost" id="nextBtn2">Nästa &rarr;</button>
+      <button class="btn" id="fsBtn">Helskärm</button>
+    </div>
+  </div>
+
+  <p class="hint">Piltangenter för att bläddra, Esc för att lämna helskärm. <a href="workshop_material/FrånPromptarTillAgenter_Ledarna_Sep2026.pdf">Ladda ner som PDF</a></p>
+
+  <div class="strip" id="strip"></div>
+
+  <footer>
+    <p>We Should Be Friends AB · Från promptar till AI-agenter, Ledarna inom Handeln, hösten 2026</p>
+  </footer>
+
+</main>
+
+<script>
+  var total = 59;
+  var current = 1;
+  var img = document.getElementById('slideImg');
+  var count = document.getElementById('count');
+  var viewer = document.getElementById('viewer');
+  var strip = document.getElementById('strip');
+
+  function pad(n){ return n < 10 ? '0' + n : '' + n; }
+
+  function render(){
+    img.src = 'assets/slides/slide-' + pad(current) + '.jpg';
+    img.alt = 'Bild ' + current + ' av ' + total;
+    count.textContent = current + ' / ' + total;
+    document.getElementById('prevBtn').disabled = current === 1;
+    document.getElementById('nextBtn').disabled = current === total;
+    document.getElementById('prevBtn2').disabled = current === 1;
+    document.getElementById('nextBtn2').disabled = current === total;
+    Array.prototype.forEach.call(strip.children, function(btn, i){
+      btn.classList.toggle('active', i + 1 === current);
+    });
+    var activeBtn = strip.children[current - 1];
+    if (activeBtn) activeBtn.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+  }
+
+  function go(n){
+    if (n < 1 || n > total) return;
+    current = n;
+    render();
+  }
+
+  for (var i = 1; i <= total; i++) {
+    (function(n){
+      var b = document.createElement('button');
+      b.textContent = n;
+      b.addEventListener('click', function(){ go(n); });
+      strip.appendChild(b);
+    })(i);
+  }
+
+  document.getElementById('prevBtn').addEventListener('click', function(){ go(current - 1); });
+  document.getElementById('nextBtn').addEventListener('click', function(){ go(current + 1); });
+  document.getElementById('prevBtn2').addEventListener('click', function(){ go(current - 1); });
+  document.getElementById('nextBtn2').addEventListener('click', function(){ go(current + 1); });
+
+  document.getElementById('fsBtn').addEventListener('click', function(){
+    if (!document.fullscreenElement) {
+      viewer.requestFullscreen && viewer.requestFullscreen();
+    } else {
+      document.exitFullscreen && document.exitFullscreen();
+    }
+  });
+
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'ArrowLeft') go(current - 1);
+    if (e.key === 'ArrowRight') go(current + 1);
+  });
+
+  render();
+</script>
+</body>
+</html>
