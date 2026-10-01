@@ -692,11 +692,23 @@
   <footer>
     <p><strong>We Should Be Friends AB</strong></p>
     <p>Workshop framtagen för Ledarna inom Handeln, hösten 2026. Kursledare Paulina Modlitba.</p>
+    <p>Frågor? <a id="contactLink" href="#">Kontakta Paulina</a></p>
   </footer>
 
 </main>
 
 <script>
+  (function(){
+    var u = ['paulina','modlitba'].join('.');
+    var d = ['gmail','com'].join('.');
+    var addr = u + '@' + d;
+    var link = document.getElementById('contactLink');
+    if (link) {
+      link.href = 'mailto:' + addr;
+      link.textContent = addr;
+    }
+  })();
+
   function showTool(tool, evt){
     var scope = evt.currentTarget.closest('section');
     scope.querySelectorAll('.tool-content').forEach(function(el){ el.classList.remove('active'); });
